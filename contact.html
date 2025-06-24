@@ -60,15 +60,15 @@
                     </div>
                     
                     <div class="social-contact">
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
                         <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
                 
                 <div class="contact-form">
                     <h2>Envie uma Mensagem</h2>
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://formsubmit.co/rianlucas.moon@gmail.com" method="POST">
                         <div class="form-group">
                             <label for="name">Nome</label>
                             <input type="text" id="name" name="name" required>
@@ -85,6 +85,8 @@
                             <label for="message">Mensagem</label>
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://yourdomain.co/http://127.0.0.1:5500/">
                         <button type="submit" class="submit-btn">Enviar Mensagem</button>
                     </form>
                 </div>
@@ -102,7 +104,8 @@
             <p>&copy; 2025 Sabrina Santos. Todos os direitos reservados.</p>
         </div>
     </footer>
-
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/emailjs.js"></script>
 </body>
 </html>

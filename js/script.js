@@ -80,21 +80,3 @@ window.addEventListener('load', () => {
 });
 
 window.addEventListener('scroll', animateOnScroll);
-
-// Formulário de contato
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Simulação de envio (substitua por código real)
-        const formData = new FormData(this);
-        const formValues = Object.fromEntries(formData.entries());
-        
-        console.log('Formulário enviado:', formValues);
-        
-        // Feedback ao usuário
-        alert('Obrigado pela sua mensagem! Entrarei em contato em breve.');
-        this.reset();
-    });
-}
