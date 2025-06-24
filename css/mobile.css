@@ -1,0 +1,145 @@
+/* Menu Hamburguer - Estilos Corrigidos */
+.burger {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+    position: fixed;
+    right: 1.5rem;
+    top: 1.5rem;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--light);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Estilos para mobile */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: var(--dark);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 1000;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .nav-links.nav-active {
+        transform: translateX(0);
+    }
+    
+    .nav-links li {
+        margin: 2rem 0;
+        opacity: 0;
+    }
+    
+    .burger {
+        display: block;
+    }
+    
+    /* Animação dos links */
+    @keyframes navLinkFade {
+        from { opacity: 0; transform: translateX(50px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+
+    /* Hero Section */
+    .hero {
+        flex-direction: column;
+        padding-top: 6rem;
+        text-align: center;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-content p {
+        max-width: 100%;
+    }
+    
+    .hero-image {
+        margin-top: 2rem;
+    }
+    
+    /* Skills */
+    .skills-container {
+        flex-direction: column;
+    }
+    
+    .skill-card {
+        min-width: 100%;
+    }
+    
+    /* Timeline */
+    .timeline-container::before {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        padding-left: 70px !important;
+        padding-right: 0 !important;
+    }
+    
+    .timeline-date {
+        position: absolute;
+        left: 0;
+        top: 20px;
+    }
+
+    /* About Page */
+    .about-container {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        margin-bottom: 2rem;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Page */
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .contact-info {
+        margin-bottom: 3rem;
+    }
+    
+    .info-card {
+        padding: 1rem;
+    }
+    
+    .info-card i {
+        margin-right: 1rem;
+    }
+}
+
+/* Animação do burger para X */
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
